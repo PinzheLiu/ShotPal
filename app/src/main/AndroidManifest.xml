@@ -20,7 +20,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".StopActivity">
+            <!-- If you have any intent-filters, they should go here -->
+        </activity>
+
+        <activity android:name=".RetryActivity">
+            <!-- If you have any intent-filters, they should go here -->
+        </activity>
+
     </application>
 
 </manifest>
