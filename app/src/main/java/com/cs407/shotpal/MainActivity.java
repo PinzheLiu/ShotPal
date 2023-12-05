@@ -1,5 +1,6 @@
 package com.cs407.shotpal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +29,29 @@ public class MainActivity extends AppCompatActivity {
                 // Create an Intent to start the StopActivity
                 Intent intent = new Intent(MainActivity.this, StopActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        //set the listener on the bottom navigation menu
+        BottomNavigationView navView = findViewById(R.id.bottom_navigation);
+        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.navigation_profile) {
+                    // Start the Profile Activity
+                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+                if (id == R.id.navigation_settings) {
+                    // Start the Profile Activity
+                    Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+                // ... additional if-else statements for other menu items ...
+                return false;
             }
         });
     }

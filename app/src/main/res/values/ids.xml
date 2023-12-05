@@ -7,7 +7,7 @@
     <item name="avgSplitContainer" type="id" />
     <item name="shotCountContainer" type="id" />
     <item name="startButton" type="id" />
-    <item name="TimeCountingContainer" type="id" />
+    <item name="UsernameContainer" type="id" />
     <item name="DiffToParContainer" type="id" />
     <item name="RecentShotContainer" type="id" />
     <item name="SplitTimeContainer" type="id" />

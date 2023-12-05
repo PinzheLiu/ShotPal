@@ -11,47 +11,43 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class StopActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Set the content view to your layout file: activity_stop.xml
-        setContentView(R.layout.activity_stop);
-
-        Button startButton = findViewById(R.id.startButton);
-        // Set an OnClickListener on the button
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Create an Intent to start the StopActivity
-                Intent intent = new Intent(StopActivity.this, RetryActivity.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_profile);
 
         //set the listener on the bottom navigation menu
         BottomNavigationView navView = findViewById(R.id.bottom_navigation);
+
+        //set the selected item to "Profile"
+        navView.setSelectedItemId(R.id.navigation_profile);
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                if (id == R.id.navigation_profile) {
+
+                if (id == R.id.navigation_time) {
                     // Start the Profile Activity
-                    Intent intent = new Intent(StopActivity.this, ProfileActivity.class);
+                    Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
                     startActivity(intent);
                     return true;
                 }
                 if (id == R.id.navigation_settings) {
                     // Start the Profile Activity
-                    Intent intent = new Intent(StopActivity.this, SettingsActivity.class);
+                    Intent intent = new Intent(ProfileActivity.this, SettingsActivity.class);
                     startActivity(intent);
                     return true;
                 }
                 return false;
             }
         });
+
+
+
     }
 
     // ... any additional methods or logic for your StopActivity ...

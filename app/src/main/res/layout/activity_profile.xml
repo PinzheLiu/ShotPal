@@ -26,30 +26,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-
-    <!-- Retry Button -->
-    <Button
-        android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:text="Stop"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <FrameLayout
         android:id="@+id/UsernameContainer"
         android:layout_width="410dp"
         android:layout_height="0dp"
         android:layout_marginTop="80dp"
-        android:layout_marginBottom="169dp"
         android:background="@drawable/black_rectangle"
-        app:layout_constraintBottom_toTopOf="@+id/SplitTimeContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- TextView for End Time -->
         <TextView
@@ -58,121 +43,81 @@
             android:layout_gravity="start|top"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:gravity="start|top"
-            android:text="Time Counting"
+            android:text="Example Username"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
-        <!-- TextView for End Time -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="05.14"
-            android:textColor="@android:color/black"
-            android:textSize="48sp" />
 
     </FrameLayout>
 
-
     <FrameLayout
-        android:id="@+id/RecentShotContainer"
+        android:id="@+id/SensitivityContainer"
         android:layout_width="410dp"
-        android:layout_height="159dp"
-        android:layout_marginEnd="1dp"
-        android:background="@drawable/black_rectangle"
-        app:layout_constraintBottom_toTopOf="@+id/ShotCountContainer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UsernameContainer">
-
-        <!-- TextView for Shots -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|top"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="start|top"
-            android:text="Recent Shot"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <!-- TextView for Shots -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="03.14"
-            android:textColor="@android:color/black"
-            android:textSize="48sp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/SplitTimeContainer"
-        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="226dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/black_rectangle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ShotCountContainer"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UsernameContainer">
 
-        <!-- TextView for Avg Split -->
+        <!-- TextView for End Time -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|top"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:gravity="start|top"
-            android:text="Split Time"
+            android:text="Session History"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
-        <!-- TextView for Avg Split -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="01.14"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
 
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/ShotCountContainer"
-        android:layout_width="204dp"
-        android:layout_height="128dp"
+        android:id="@+id/BestRecordsContainer"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
         android:background="@drawable/black_rectangle"
-        app:layout_constraintBottom_toBottomOf="@+id/SplitTimeContainer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/SplitTimeContainer">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SensitivityContainer">
 
-        <!-- TextView for Shot Count -->
+        <!-- TextView for End Time -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|top"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:gravity="start|top"
-            android:text="Shot Count"
+            android:text="Best Records"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
-        <!-- TextView for Shot Count -->
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/TrackingModeContainer"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/black_rectangle"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- TextView for End Time -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="2"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Profile Setting"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
+
 
     </FrameLayout>
 
